@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  end_time: 2020-04-10 15:44:29
+  is_recurring: false
+  frequency: MyString
+  reason: MyString
+  service_id: 
+
+two:
+  end_time: 2020-04-10 15:44:29
+  is_recurring: false
+  frequency: MyString
+  reason: MyString
+  service_id: 
