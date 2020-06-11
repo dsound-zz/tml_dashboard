@@ -2,6 +2,9 @@ services = [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', '
 
 services.each { |service| Service.create(name: service) }
 
+User.create(username: 'automated', password: 'sd0fu9sudafjo4') 
+User.create(username: 'admin', password: 'admin')
+
 # 5.times do |x| 
 #     Service.find(Random.rand(1..50)).update(is_down: true)
 # end 
