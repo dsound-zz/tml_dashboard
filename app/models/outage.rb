@@ -17,7 +17,6 @@ class Outage < ApplicationRecord
     end
 
     def overlap
-       byebug 
         if Outage.where('? < end_time AND ? > start_time AND service_id = ?', self.start_time, self.end_time, self.service_id).any? 
             errors.add(:base, message: "Outage range for service overlaps another")
         else      
