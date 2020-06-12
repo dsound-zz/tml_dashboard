@@ -23,12 +23,13 @@ class Dashboard extends Component {
   };
 
   componentDidMount() {
-    let token = localStorage.getItem("token");
-    if (token) {
-      this.props.getCurrentUser(token);
-    } else {
-      null;
-    }
+    // let token = localStorage.getItem("token");
+    // if (token) {
+    //   this.props.getCurrentUser(token);
+    // } else {
+    //   null;
+    // }
+    this.props.getCurrentUser();
     this.props.getServices();
     this.props.getOutages();
     this.props.getNotes();

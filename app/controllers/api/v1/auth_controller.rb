@@ -11,7 +11,8 @@ class Api::V1::AuthController < ApplicationController
     end
 
     def get_user_from_token
-        if curr_user
+        curr_user = User.find(2)
+        if curr_user 
             render json: { currentUser: curr_user }
         else
              render json: {errors: 'No user'}
