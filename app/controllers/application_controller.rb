@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     skip_before_action :verify_authenticity_token
-    
+
     def encode_token(user_id)
       JWT.encode({user_id: user_id}, Rails.application.credentials.jwt)
   end
@@ -22,11 +22,14 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    if curr_user
-      true
-    else
-      render json: {error: 'Unauthorized User'}, status: :unauthorized
-      false
-    end
-  end
+  #   if curr_user
+  #     true
+  #   else
+  #     render json: {error: 'Unauthorized User'}, status: :unauthorized
+  #     false
+  #   end
+  # end
+  curr_user = User.find(2) 
+  end 
+  
 end

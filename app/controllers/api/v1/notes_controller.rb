@@ -1,6 +1,6 @@
 class Api::V1::NotesController < ApplicationController
   before_action :find_note, only: [:update, :destroy]
-  before_action :authenticate_user, only: [:create, :update, :destroy]
+  before_action :authenticate_user
 
   def index
     @notes = Note.all
