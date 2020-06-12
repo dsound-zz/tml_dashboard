@@ -132,7 +132,6 @@ class EditOutage extends Component {
 
               <Form.Field>
                 <Dropdown
-                  placeholder={this.state.service === "" ? "Service" : this.state.service.name}
                   value={this.state.service}
                   name="service"
                   fluid

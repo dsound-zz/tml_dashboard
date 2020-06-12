@@ -207,7 +207,8 @@ class CreateOutage extends Component {
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.currentUser.currentUser
+    currentUser: state.currentUser.currentUser,
+    services: state.services.services
   }
 }
 

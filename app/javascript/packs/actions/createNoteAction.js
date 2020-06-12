@@ -8,7 +8,7 @@ export const createNote = (entry, isPublic, serviceId, userId) => (dispatch) => 
     qs.stringify({ 
       entry: entry, 
       is_public: isPublic,
-      user_id: userId, 
+      user_id: 2, 
       service_id: serviceId}),
     { headers: { "Authorization" : token } })
     .then(res => {

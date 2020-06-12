@@ -29,8 +29,7 @@ class ServiceNotesComponent extends Component {
     this.setState({ entry: "" });
   };
 
-  handleUpdate = (e, note) => {
-    debugger 
+  handleUpdate = (e, note) => { 
     this.setState({
       showEditInput: true,
       editNotes: note,

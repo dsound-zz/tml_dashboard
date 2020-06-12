@@ -1,6 +1,7 @@
 class Api::V1::NotesController < ApplicationController
   before_action :find_note, only: [:update, :destroy]
-  before_action :authenticate_user
+  # before_action :authenticate_user
+
 
   def index
     @notes = Note.all
@@ -18,35 +19,26 @@ class Api::V1::NotesController < ApplicationController
   end
   
   def create 
-    if curr_user
-      @note = Note.create!(note_params)
-      if @note.save 
-        render :json => @note, status: @ok   
-      else        
-        render :json => { errors: @note.errors.full_messages }, status:  @unprocessible_entity
-      end
-    else     
-      render :json => {}, status: 401
+    @note = Note.create!(note_params)
+    if @note.save 
+      render :json => @note, status: @ok   
+    else        
+      render :json => { errors: @note.errors.full_messages }, status:  @unprocessible_entity
     end
   end
 
   def update
-    if curr_user 
-      @note.update(note_params) 
-      if @note.save 
-        render :json => @note, status: @ok 
-      else       
-        render :json => { errors: @note.errors.full_messages }, status:  @unprocessible_entity
-      end
-    else      
-      render :json => {}, status: 401
+    @note.update(note_params) 
+    if @note.save 
+      render :json => @note, status: @ok 
+    else       
+      render :json => { errors: @note.errors.full_messages }, status:  @unprocessible_entity
     end
   end
 
   def destroy
-    if curr_user
-      note_id = @note.id
-      @note.delete  
+    note_id = @note.id
+    if @note.delete  
       render :json => { noteId: note_id }
     else      
       render :json => {}, status: 401

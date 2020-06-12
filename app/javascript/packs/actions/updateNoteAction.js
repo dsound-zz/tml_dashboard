@@ -10,7 +10,7 @@ export const updateNote = (entry, isPublic, serviceId, userId, noteId) => (dispa
         entry: entry,
         is_public: isPublic,
         service_id: serviceId,
-        user_id: userId}),
+        user_id: 2}),
         { headers: { "Authorization" : token } })
       .then((res) => {
       const updatedNote = res.data;

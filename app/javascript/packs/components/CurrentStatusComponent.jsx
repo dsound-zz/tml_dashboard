@@ -34,7 +34,7 @@ class CurrentStatus extends Component {
 
   getEndTime = (service) => {
       if (service.outages && service.outages.length !== 0) {
-        const foundOutage= this.props.outages.find(
+        const foundOutage=this.props.outages.find(
           (outage) =>
             outage.service_id === service.id &&
             new Date(outage.start_time) < new Date()

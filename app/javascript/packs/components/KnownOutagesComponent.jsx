@@ -20,15 +20,15 @@ class KnownOutagesComponent extends Component {
   }
   
   render() {
-  
+    console.log(this.props.outages)
     return (
       <>
         <Container>
-          <CreateOutage services={this.props.services} />
+          <CreateOutage />
           {this.props.outages && this.props.outages.map((outage) => (
             <Card key={uuidv4()} id="outage-card" raised={true} color="teal">
               <Card.Description>
-                service: {outage.service.name}
+                service: {outage.service && outage.service.name}
               </Card.Description>
               <Card.Description>
                 start_time:{" "}

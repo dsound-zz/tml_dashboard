@@ -22,7 +22,7 @@ class Api::V1::OutagesController < ApplicationController
 
   def update
      @outage.update!(outage_params) 
-     if @outage.save
+    if @outage.save
       render :json => @outage, status: @ok 
     else       
       render :json => { errors: @outage.errors.full_messages }, status:  @unprocessible_entity
