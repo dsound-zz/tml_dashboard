@@ -92,7 +92,7 @@ class ServiceNotesComponent extends Component {
   //   };
 
   render() {
-    console.log(this.state, this.props)
+
     return (
       <>
         <Table style={{ display: this.props.showServiceLogs }} striped>

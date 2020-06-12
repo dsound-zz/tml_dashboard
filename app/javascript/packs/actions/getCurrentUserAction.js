@@ -5,7 +5,7 @@ export const getCurrentUser = token => dispatch => {
     .then(res => {
         console.log("made it")
         let currentUser = res.data.currentUser; 
-        console.log(res.data.currentUser)
+        console.log(res)
 
          dispatch({ type: "GET_CURRENT_USER", payload: currentUser })
     })

@@ -29,7 +29,7 @@ class Header extends Component {
                 ></Image>
               </Grid.Column>
               <Grid.Column>
-                {this.props.currentUser === null ?
+                {/* {this.props.currentUser === null ?
                  (
                   <Link
                     to={"/login"}
@@ -46,10 +46,10 @@ class Header extends Component {
                   >
                     Logout
                   </Link>
-                )}
-                {this.props.currentUser !== null ?
+                )} */}
+                {this.props.currentUser && this.props.currentUser !== null ?
                 
-                  <div>Logged in as: {this.props.currentUser && this.props.currentUser.username}</div>
+                  <div>Logged in as: {this.props.currentUser.username}</div>
                  : null}
               </Grid.Column>
             </Grid.Row>
