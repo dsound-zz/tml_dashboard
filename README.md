@@ -15,9 +15,8 @@ A public client can do the following:
     a) C.R.U.D. known Outages on services 
     b) C.R.U.D. notes on each service 
     c) Set notes public or private
+  5) When a service goes down or up, automated note is created
+  6) Admin users can create private knows F.Y.E.O. 
     
    
-# tml_dashboard
-# tml_dashboard
-# tml_dashboard
-# tml_dashboard
+
